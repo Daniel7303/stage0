@@ -29,6 +29,7 @@ load_dotenv()
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -41,7 +42,6 @@ USER_NAME = os.getenv("USER_NAME", "Your Full Name")
 USER_STACK = os.getenv("USER_STACK", "Python/Django")
 CATFACT_API_URL = os.getenv("CATFACT_API_URL", "https://catfact.ninja/fact")
 CATFACT_TIMEOUT = float(os.getenv("CATFACT_TIMEOUT", 3.0))
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
 
