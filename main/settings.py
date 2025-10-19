@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from dotenv import load_dotenv
 import os
+import dj_database_url
 from pathlib import Path
 
 
@@ -30,7 +31,7 @@ load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # env config
@@ -101,7 +102,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
 
