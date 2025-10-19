@@ -1,7 +1,7 @@
 # stage0 Task
 RESTful API endpoint that returns your profile information along with a dynamic cat fact fetched from an external API.
 
-# built with (Django + DRF)
+# built with Python(Django + DRF)
 
 ## Setup
 1. Clone repo
@@ -22,7 +22,6 @@ python manage.py migrate
 python manage.py runserver 8000
 
 GET http://127.0.0.1:8000/me
+    https://web-production-8806c.up.railway.app/me
 
-production GET 
-python manage.py test
 
